@@ -17,9 +17,9 @@ Turn a Windows path (e.g. `C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\
    - Paths with placeholders (`<username>`, `<SID>`, `<n>`) or wildcards (`*.lnk`) are documented as the general location/pattern.
 3. **Research.** Run 2-4 `microsoft_docs_search` queries (file name, file name + "command-line options", parent product/package). Then `microsoft_docs_fetch` the most relevant pages. For executables ALWAYS fetch the full command-line options page if one exists, so the table is complete and in page order.
 4. **Write the note** using the template below.
-5. **Save** to `kb/tools/os/structure/` mirroring the path: drop the drive letter, replace `\` with `/`, append `.md`. Keep real folder names, spaces included. Create folders as needed.
-   - `C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe` -> `kb/tools/os/structure/Program Files (x86)/Windows Kits/10/Debuggers/x64/windbg.exe.md`
-   - Directory `C:\Windows\System32` -> `kb/tools/os/structure/Windows/System32.md`
+5. **Save** to `kb/tools/os/structure/` mirroring the path: drop the drive letter, replace `\` with `/`, convert the whole path to **lowercase**, append `.md`. Keep spaces and punctuation. Create folders as needed.
+   - `C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe` -> `kb/tools/os/structure/program files (x86)/windows kits/10/debuggers/x64/windbg.exe.md`
+   - Directory `C:\Windows\System32` -> `kb/tools/os/structure/windows/system32.md`
    - Characters not allowed in file names (`<`, `>`, `*`, `?`, `|`, `:`, `"`) are kept as-is on Linux; do not rename them.
 6. Commit and push are handled by the caller (e.g. `/learn-batch`). When run alone, commit `Add Microsoft Learn note: <item>` and push to `main`.
 

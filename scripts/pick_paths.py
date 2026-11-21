@@ -14,8 +14,8 @@ OUT = os.path.join(ROOT, "kb", "tools", "os", "structure")
 
 
 def note_path(p):
-    # Drop drive letter, keep the rest as folders.
-    rel = re.sub(r"^[A-Za-z]:\\", "", p).replace("\\", "/")
+    # Drop drive letter, keep the rest as folders, all lowercase (no case duplicates).
+    rel = re.sub(r"^[A-Za-z]:\\", "", p).replace("\\", "/").lower()
     return os.path.join(OUT, rel + ".md")
 
 
