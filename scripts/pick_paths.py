@@ -21,7 +21,7 @@ def note_path(p):
 
 def is_file_or_dir(p):
     # Filesystem paths only: drive-letter paths or %ENVVAR% paths. Excludes registry hives.
-    return bool(re.match(r"^([A-Za-z]:\\|%)", p))
+    return bool(re.match(r"^([A-Za-z]:\\|%|HK(LM|CU|U|CR|CC)\\)", p, re.I))
 
 
 def main():

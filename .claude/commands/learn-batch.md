@@ -1,5 +1,5 @@
 ---
-description: Run learn-path-note on file/directory paths from fullpaths.csv (default 10 random) and push notes to kb/tools/os/structure
+description: Run learn-path-note on file, directory and registry paths from fullpaths.csv (default 10 random) and push notes to kb/tools/os/structure
 argument-hint: "[count|all] [--seed N]"
 ---
 
@@ -14,7 +14,7 @@ python scripts/pick_paths.py $ARGUMENTS
 ```
 
 - No arguments = 10 random paths. `all` = every remaining path. `--seed N` makes the random pick repeatable.
-- Only file/directory paths are picked (drive-letter or `%VAR%` paths; registry keys are skipped).
+- File, directory and registry key paths are picked (drive-letter, `%VAR%` and HKLM/HKCU/HKU/HKCR/HKCC paths).
 - Paths that already have a note in `kb/tools/os/structure/` are skipped, so re-running continues where it left off.
 
 If nothing is printed, report that everything is done and stop.
