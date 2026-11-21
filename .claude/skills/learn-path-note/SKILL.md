@@ -26,13 +26,13 @@ Turn a Windows path (e.g. `C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\
 ## Rules
 
 - Use only information from Microsoft Learn pages actually retrieved for this path.
-- If a section has no Learn coverage, write `_Not documented on Microsoft Learn_`.
+- If a section has no Learn coverage, write `Not documented on Microsoft Learn at {{yyyy/MM/dd HH:MM UTC}}` with the current UTC time (e.g. `Not documented on Microsoft Learn at 2026/11/21 05:14 UTC`).
 - Remove all `{{if}}` / `{{endif}}` lines and the sections that do not apply to the classified type.
 - `created`: today's date, `YYYY-MM-DD`.
 - `fullpath`: the full path exactly as given, in single quotes in the frontmatter, e.g. `fullpath: 'C:\Windows\System32\cmd.exe'`. Repeat it unquoted on the `**fullpath**:` line above `# description`.
 - `aliases`: the file name plus any other names Learn uses (e.g. `WinDbg (Classic)`).
 - `url`: YAML list of every Learn page used, without `#anchors` duplicates.
-- `simple description`: 2-3 plain sentences.
+- `simple description`: a blockquote (see template). `{{datestamp}}` is today's date `YYYY-MM-DD`. Explain what it is in 3-5 plain sentences a junior SOC analyst can understand, then a `**SOC NOTE**:` line with any security-relevant information that gives it value in an investigation (attacker abuse, forensic value, events or artifacts it produces). Base both on the Learn pages retrieved. If Learn has nothing on the item, the blockquote body is just `Not documented on Microsoft Learn at {{yyyy/MM/dd HH:MM UTC}}`.
 - `description`: 2-3 sentences - what it is, which package/product ships it, related tools.
 - Options table: every documented option, in page order; option in backticks with exact case (`` `-I[S]` ``); escape `|` in cells as `\|`; keep descriptions to one or two sentences and note mode restrictions (e.g. "(User mode only)").
 
@@ -57,6 +57,11 @@ url:
 
 ## simple description
 
+> ### {{datestamp}} Claude said
+> what is it in 3-5 sentences
+>
+> **SOC NOTE**: Add any security related information that makes it value in an investigation
+>
 
 # purpose
 
