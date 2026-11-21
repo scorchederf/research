@@ -10,7 +10,7 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = os.path.join(ROOT, "kb", "tools", "os", "structure")
+OUT = os.path.join(ROOT, "kb", "tools", "os", "windows", "dir")
 
 
 def note_path(p):
