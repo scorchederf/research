@@ -14,6 +14,7 @@ url:
   - https://learn.microsoft.com/windows-server/administration/windows-commands/reg-add
   - https://learn.microsoft.com/windows-server/administration/windows-commands/reg-query
   - https://learn.microsoft.com/troubleshoot/windows-server/performance/windows-registry-advanced-users
+  - https://learn.microsoft.com/windows-hardware/manufacture/desktop/windows-10-s-planning?view=windows-11
 ---
 
 **fullpath**:C:\Windows\System32\reg.exe
