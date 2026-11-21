@@ -37,10 +37,12 @@ The diskpart command interpreter manages a computer's drives: disks, partitions,
 
 # typical use cases
 
-- Interactive: `list disk`, `select disk 1`, `create partition primary`, `format fs=ntfs label=Backup quick`
-- Run a script: `diskpart /s scriptname.txt`
-- Script with logging: `diskpart /s scriptname.txt > logfile.txt`
-- Example script: wipe disk 0, convert to GPT, create a 300 MB WinRE partition and assign letter T.
+| usage | description |
+| --- | --- |
+| `list disk`, `select disk 1`, `create partition primary`, `format fs=ntfs label=Backup quick` | Interactive. |
+| `diskpart /s scriptname.txt` | Run a script. |
+| `diskpart /s scriptname.txt > logfile.txt` | Script with logging. |
+| — | Example script: wipe disk 0, convert to GPT, create a 300 MB WinRE partition and assign letter T. |
 
 # options
 

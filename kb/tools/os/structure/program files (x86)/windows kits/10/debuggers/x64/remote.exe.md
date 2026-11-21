@@ -41,10 +41,12 @@ Runs a console program on a server and opens a named pipe so clients can connect
 
 # typical use cases
 
-- Start a server session: `remote /s cmd test1`.
-- Connect a client: `remote /c server01 test1`.
-- Share a debugger session: start KD/CDB under remote.exe, or run `.remote MyBrokenBox` in the debugger, then `remote /c server2 MyBrokenBox`.
-- List visible sessions on a computer: `remote /q Computer`.
+| usage | description |
+| --- | --- |
+| `remote /s cmd test1` | Start a server session. |
+| `remote /c server01 test1` | Connect a client. |
+| — | Share a debugger session: start KD/CDB under remote.exe, or run `.remote MyBrokenBox` in the debugger, then `remote /c server2 MyBrokenBox`. |
+| `remote /q Computer` | List visible sessions on a computer. |
 
 # options
 

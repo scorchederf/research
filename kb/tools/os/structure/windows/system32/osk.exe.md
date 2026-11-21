@@ -37,9 +37,11 @@ Provides a visual keyboard for text entry and navigation without a physical keyb
 
 # typical use cases
 
-- Enter text on devices without a hardware keyboard or for users with accessibility needs.
-- Learn which language-specific characters map to which keys (e.g. Korean IME layout).
-- Security note from Learn: MS14-039 (CVE-2014-2781) fixed a local elevation of privilege when OSK was executed from a low-integrity process.
+| usage | description |
+| --- | --- |
+| — | Enter text on devices without a hardware keyboard or for users with accessibility needs. |
+| — | Learn which language-specific characters map to which keys (e.g. Korean IME layout). |
+| — | Security note from Learn: MS14-039 (CVE-2014-2781) fixed a local elevation of privilege when OSK was executed from a low-integrity process. |
 
 # options
 

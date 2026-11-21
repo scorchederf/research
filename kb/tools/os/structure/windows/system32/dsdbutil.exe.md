@@ -34,7 +34,9 @@ Manage AD LDS instance configuration and database files, such as ports and file 
 
 # typical use cases
 
-- Change AD LDS LDAP/SSL ports or move data/log paths (Exchange Edge Transport, via ConfigureAdam.ps1).
+| usage | description |
+| --- | --- |
+| — | Change AD LDS LDAP/SSL ports or move data/log paths (Exchange Edge Transport, via ConfigureAdam.ps1). |
 
 # options
 

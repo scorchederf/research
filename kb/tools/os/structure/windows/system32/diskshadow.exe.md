@@ -34,9 +34,11 @@ Provides command-line and scripted access to VSS: create persistent or non-persi
 
 # typical use cases
 
-- Run a saved backup script: `diskshadow /s script.dsh` (set context, add volumes, `create`, `expose` as drive letters, `exec` a backup .cmd, `end backup`).
-- List all shadow copies: `list shadows all`
-- Delete shadow copies that are not client-accessible to `vssadmin`.
+| usage | description |
+| --- | --- |
+| — | Run a saved backup script: `diskshadow /s script.dsh` (set context, add volumes, `create`, `expose` as drive letters, `exec` a backup .cmd, `end backup`). |
+| `list shadows all` | List all shadow copies. |
+| — | Delete shadow copies that are not client-accessible to `vssadmin`. |
 
 # options
 

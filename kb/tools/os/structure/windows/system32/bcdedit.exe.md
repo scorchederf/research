@@ -32,9 +32,11 @@ Create, export, import and modify BCD stores and entries, control the boot manag
 
 # typical use cases
 
-- View entries: `bcdedit /enum` (or `bcdedit /v` for full identifiers)
-- Back up the store: `bcdedit /export <file>`
-- Enable kernel debugger: `bcdedit /debug on`
+| usage | description |
+| --- | --- |
+| — | View entries: `bcdedit /enum` (or `bcdedit /v` for full identifiers). |
+| `bcdedit /export <file>` | Back up the store. |
+| `bcdedit /debug on` | Enable kernel debugger. |
 
 # options
 

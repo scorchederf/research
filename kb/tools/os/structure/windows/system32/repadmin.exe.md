@@ -38,12 +38,13 @@ Repadmin.exe helps administrators diagnose Active Directory replication between 
 
 # typical use cases
 
-- Forest-wide replication status as CSV: `repadmin /showrepl * /csv > showrepl.csv`
-- Interactive grid in PowerShell: `repadmin /showrepl * /csv | convertfrom-csv | out-gridview`
-- Compare password attribute metadata: `repadmin /showobjmeta <DC> <DN of DC computer account>`
-- Make a DC a global catalog: `repadmin.exe /options DC_NAME +IS_GC`
-
-Syntax: `repadmin <cmd> <args> [/u:{domain\user}] [/pw:{password | *}] [/retry[:<retries>][:<delay>]] [/csv]`
+| usage | description |
+| --- | --- |
+| `repadmin /showrepl * /csv > showrepl.csv` | Forest-wide replication status as CSV. |
+| `repadmin /showrepl * /csv \| convertfrom-csv \| out-gridview` | Interactive grid in PowerShell. |
+| `repadmin /showobjmeta <DC> <DN of DC computer account>` | Compare password attribute metadata. |
+| `repadmin.exe /options DC_NAME +IS_GC` | Make a DC a global catalog. |
+| `repadmin <cmd> <args> [/u:{domain\user}] [/pw:{password \| *}] [/retry[:<retries>][:<delay>]] [/csv]` | Syntax. |
 
 # options
 

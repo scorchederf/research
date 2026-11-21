@@ -33,8 +33,10 @@ Compress files into Microsoft Cabinet (.cab) archives, either a single source fi
 
 # typical use cases
 
-- Compress one file: `makecab file.txt file.cab`
-- Build a cabinet from a directives file: `makecab /f files.ddf`
+| usage | description |
+| --- | --- |
+| `makecab file.txt file.cab` | Compress one file. |
+| `makecab /f files.ddf` | Build a cabinet from a directives file. |
 
 # options
 

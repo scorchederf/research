@@ -33,9 +33,11 @@ Run commands and programs on a remote endpoint through a WinRM remote shell, wit
 
 # typical use cases
 
-- `winrs /r:myserver command`
-- `winrs /r:contoso.com /usessl command`
-- `winrs /r:myserver /ad /u:administrator /p:$%fgh7 dir \\anotherserver\share`
+| usage | description |
+| --- | --- |
+| `winrs /r:myserver command` |  |
+| `winrs /r:contoso.com /usessl command` |  |
+| `winrs /r:myserver /ad /u:administrator /p:$%fgh7 dir \\anotherserver\share` |  |
 
 # options
 

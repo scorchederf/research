@@ -39,13 +39,15 @@ Provides the means to install, modify, and perform operations on Windows Install
 
 # typical use cases
 
-- Normal install: `msiexec.exe /i "C:\example.msi"`.
-- Silent install with no UI: `msiexec.exe /i "C:\example.msi" /qn`.
-- Install without rebooting: `msiexec.exe /i "C:\example.msi" /norestart`.
-- Verbose logging: `msiexec.exe /i "C:\example.msi" /L*V "C:\package.log"`.
-- Apply a patch: `msiexec.exe /p "C:\MyPatch.msp"`.
-- Force full repair: `msiexec.exe /fa {ProductCode}`.
-- Uninstall: `msiexec /x msisample.msi`.
+| usage | description |
+| --- | --- |
+| `msiexec.exe /i "C:\example.msi"` | Normal install. |
+| `msiexec.exe /i "C:\example.msi" /qn` | Silent install with no UI. |
+| `msiexec.exe /i "C:\example.msi" /norestart` | Install without rebooting. |
+| `msiexec.exe /i "C:\example.msi" /L*V "C:\package.log"` | Verbose logging. |
+| `msiexec.exe /p "C:\MyPatch.msp"` | Apply a patch. |
+| `msiexec.exe /fa {ProductCode}` | Force full repair. |
+| `msiexec /x msisample.msi` | Uninstall. |
 
 # options
 

@@ -39,10 +39,12 @@ Creates and manages Event Trace Session and Performance logs from the command li
 
 # typical use cases
 
-- Create an event trace collector: `logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile`.
-- Update a collector: `logman update trace trace_log -max 10 -f csv -v mmddhhmm`.
-- Delete a collector: `logman delete perf_log`.
-- Import a Data Collector Set: `logman import perf_log -s server_1 -xml c:\windows\perf_log.xml`.
+| usage | description |
+| --- | --- |
+| `logman create trace trace_log -nb 16 256 -bs 64 -o c:\logfile` | Create an event trace collector. |
+| `logman update trace trace_log -max 10 -f csv -v mmddhhmm` | Update a collector. |
+| `logman delete perf_log` | Delete a collector. |
+| `logman import perf_log -s server_1 -xml c:\windows\perf_log.xml` | Import a Data Collector Set. |
 
 # options
 

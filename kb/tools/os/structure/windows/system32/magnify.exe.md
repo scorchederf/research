@@ -34,8 +34,10 @@ Magnify screen content for low-vision users, with settings for zoom level and in
 
 # typical use cases
 
-- Toggle Magnifier with Windows key + Plus (+); zoom with Windows key + Plus/Minus or Ctrl + Alt + mouse wheel.
-- Configure per-display zoom and view locking in **Accessibility > Magnifier**.
+| usage | description |
+| --- | --- |
+| — | Toggle Magnifier with Windows key + Plus (+); zoom with Windows key + Plus/Minus or Ctrl + Alt + mouse wheel. |
+| — | Configure per-display zoom and view locking in **Accessibility > Magnifier**. |
 
 # options
 

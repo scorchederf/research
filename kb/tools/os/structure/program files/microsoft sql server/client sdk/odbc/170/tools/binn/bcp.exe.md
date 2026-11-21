@@ -36,10 +36,12 @@ Import large numbers of new rows into Database Engine tables or export data out 
 
 # typical use cases
 
-- Export a table: `bcp dbo.T1 out T1.txt -T -S <server_name> -d tempdb -w -t ,`.
-- Import a data file into a table (`in`), optionally with `-h "TABLOCK"` or `-b` batching.
-- Export the results of a query with `queryout`.
-- Generate a format file with `format nul -f <file> [-x]`.
+| usage | description |
+| --- | --- |
+| `bcp dbo.T1 out T1.txt -T -S <server_name> -d tempdb -w -t ,` | Export a table. |
+| — | Import a data file into a table (`in`), optionally with `-h "TABLOCK"` or `-b` batching. |
+| — | Export the results of a query with `queryout`. |
+| — | Generate a format file with `format nul -f <file> [-x]`. |
 
 # options
 

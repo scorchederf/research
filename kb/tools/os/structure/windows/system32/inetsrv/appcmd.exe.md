@@ -36,11 +36,13 @@ Manage IIS from the command line or scripts without the GUI: create/configure si
 
 # typical use cases
 
-- `appcmd list site` / `appcmd list apppool` - inventory sites and pools.
-- `appcmd add site /name:... /bindings:... /physicalPath:...` - create a site.
-- `appcmd set config <URL> /section:<name> /property:value` - edit configuration.
-- `appcmd add backup "Name"` / `appcmd restore backup "Name"` - back up and restore configuration.
-- `appcmd list vdir /text:physicalPath` - feed output into other shell tools.
+| usage | description |
+| --- | --- |
+| `appcmd list site` / `appcmd list apppool` | inventory sites and pools. |
+| `appcmd add site /name:... /bindings:... /physicalPath:...` | create a site. |
+| `appcmd set config <URL> /section:<name> /property:value` | edit configuration. |
+| `appcmd add backup "Name"` / `appcmd restore backup "Name"` | back up and restore configuration. |
+| `appcmd list vdir /text:physicalPath` | feed output into other shell tools. |
 
 # options
 

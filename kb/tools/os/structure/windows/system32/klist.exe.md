@@ -35,13 +35,15 @@ Displays a list of currently cached Kerberos tickets. You must be at least a Dom
 
 # typical use cases
 
-- Query the ticket cache to find missing tickets, target server/account errors, or unsupported encryption types (Event ID 27): `klist`, `klist -li 0x3e7`.
-- View the TGT details: `klist tgt`.
-- Purge the ticket cache: `klist purge`, `klist purge -li 0x3e7`.
-- Locate logon sessions and logon IDs: `klist sessions`.
-- Diagnose Kerberos constrained delegation failures: `klist kcd_cache`.
-- Request a ticket for a specific SPN: `klist get host/%computername%`.
-- Target, query, or flush preferred domain controllers: `klist add_bind`, `klist query_bind`, `klist purge_bind`.
+| usage | description |
+| --- | --- |
+| `klist`, `klist -li 0x3e7` | Query the ticket cache to find missing tickets, target server/account errors, or unsupported encryption types (Event ID 27). |
+| `klist tgt` | View the TGT details. |
+| `klist purge`, `klist purge -li 0x3e7` | Purge the ticket cache. |
+| `klist sessions` | Locate logon sessions and logon IDs. |
+| `klist kcd_cache` | Diagnose Kerberos constrained delegation failures. |
+| `klist get host/%computername%` | Request a ticket for a specific SPN. |
+| `klist add_bind`, `klist query_bind`, `klist purge_bind` | Target, query, or flush preferred domain controllers. |
 
 # options
 

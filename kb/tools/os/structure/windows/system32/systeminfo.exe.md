@@ -36,9 +36,11 @@ Displays detailed configuration information about a computer and its operating s
 
 # typical use cases
 
-- View the configuration of the local or a remote computer (`systeminfo /s srvmain`).
-- Remotely query a domain computer with alternate credentials and list output (`systeminfo /s srvmain2 /u maindom\hiropln /p p@ssW23 /fo list`).
-- Determine the Windows version: `systeminfo | findstr /B /C:"OS Name" /B /C:"OS Version"`.
+| usage | description |
+| --- | --- |
+| — | View the configuration of the local or a remote computer (`systeminfo /s srvmain`). |
+| — | Remotely query a domain computer with alternate credentials and list output (`systeminfo /s srvmain2 /u maindom\hiropln /p p@ssW23 /fo list`). |
+| `systeminfo \| findstr /B /C:"OS Name" /B /C:"OS Version"` | Determine the Windows version. |
 
 # options
 

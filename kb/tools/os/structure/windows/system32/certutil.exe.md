@@ -36,11 +36,13 @@ Certutil.exe is a command-line program installed as part of Certificate Services
 
 # typical use cases
 
-- Dump a certificate or file: `certutil -dump File`
-- Retrieve domain controller certificates: `certutil -dc cpandl-dc1 -DCInfo cpandl`
-- Check whether a certificate is valid on the CA: `certutil -isvalid SerialNumber`
-- Ping the AD CS request interface: `certutil -ping`
-- Show all verbs, including hidden ones: `certutil -v -uSAGE`
+| usage | description |
+| --- | --- |
+| `certutil -dump File` | Dump a certificate or file. |
+| `certutil -dc cpandl-dc1 -DCInfo cpandl` | Retrieve domain controller certificates. |
+| `certutil -isvalid SerialNumber` | Check whether a certificate is valid on the CA. |
+| `certutil -ping` | Ping the AD CS request interface. |
+| `certutil -v -uSAGE` | Show all verbs, including hidden ones. |
 
 # options
 

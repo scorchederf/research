@@ -40,11 +40,13 @@ reg.exe (the Console Registry Tool for Windows) performs operations on registry 
 
 # typical use cases
 
-- Add a key on a remote computer: `reg add \\ABC\HKLM\Software\MyCo`
-- Add a binary value: `reg add HKLM\Software\MyCo /v Data /t REG_BINARY /d fe340ead`
-- Find keys matching a string: `reg query HKLM\SOFTWARE\Microsoft /s /f asp.net /k`
-- Show the default value: `reg query HKLM\SOFTWARE /ve`
-- Help: `reg /?`
+| usage | description |
+| --- | --- |
+| `reg add \\ABC\HKLM\Software\MyCo` | Add a key on a remote computer. |
+| `reg add HKLM\Software\MyCo /v Data /t REG_BINARY /d fe340ead` | Add a binary value. |
+| `reg query HKLM\SOFTWARE\Microsoft /s /f asp.net /k` | Find keys matching a string. |
+| `reg query HKLM\SOFTWARE /ve` | Show the default value. |
+| `reg /?` | Help. |
 
 # options
 

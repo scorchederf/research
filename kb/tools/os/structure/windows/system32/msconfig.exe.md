@@ -38,11 +38,13 @@ Finds and isolates startup issues by letting you temporarily prevent services an
 
 # typical use cases
 
-- Perform a diagnostic startup to load only basic drivers and services.
-- Perform a selective/clean boot and enable services or startup items one at a time to find the cause of an issue (Services and Startup tabs, Disable all).
-- Launch diagnostic and advanced tools from the Tools tab, which also shows their paths and switches.
-- Remove the /SAFEBOOT option (BOOT.INI tab on older Windows) when a machine keeps booting into safe mode.
-- Return to Normal startup after troubleshooting.
+| usage | description |
+| --- | --- |
+| — | Perform a diagnostic startup to load only basic drivers and services. |
+| — | Perform a selective/clean boot and enable services or startup items one at a time to find the cause of an issue (Services and Startup tabs, Disable all). |
+| — | Launch diagnostic and advanced tools from the Tools tab, which also shows their paths and switches. |
+| — | Remove the /SAFEBOOT option (BOOT.INI tab on older Windows) when a machine keeps booting into safe mode. |
+| — | Return to Normal startup after troubleshooting. |
 
 # options
 

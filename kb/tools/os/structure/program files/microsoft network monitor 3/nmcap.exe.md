@@ -37,8 +37,10 @@ Capture network traffic from the command line with minimal system impact, with c
 
 # typical use cases
 
-- Low-overhead capture on production systems instead of the Network Monitor GUI
-- Chained captures that keep individual capture files small
+| usage | description |
+| --- | --- |
+| — | Low-overhead capture on production systems instead of the Network Monitor GUI. |
+| — | Chained captures that keep individual capture files small. |
 
 # options
 

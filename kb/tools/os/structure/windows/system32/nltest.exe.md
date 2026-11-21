@@ -36,11 +36,13 @@ Nltest is a command-line tool that performs network administrative tasks such as
 
 # typical use cases
 
-- List DCs in a domain: `nltest /dclist:fourthcoffee`
-- Show user SAM attributes: `nltest /user:"TestAdmin"`
-- Verify trust with a server: `nltest.exe /server:fourthcoffee-dc-01 /sc_query:fourthcoffee`
-- Find the PDC emulator: `nltest /dcname:fourthcoffee`
-- List domain trusts: `nltest /domain_trusts`
+| usage | description |
+| --- | --- |
+| `nltest /dclist:fourthcoffee` | List DCs in a domain. |
+| `nltest /user:"TestAdmin"` | Show user SAM attributes. |
+| `nltest.exe /server:fourthcoffee-dc-01 /sc_query:fourthcoffee` | Verify trust with a server. |
+| `nltest /dcname:fourthcoffee` | Find the PDC emulator. |
+| `nltest /domain_trusts` | List domain trusts. |
 
 # options
 

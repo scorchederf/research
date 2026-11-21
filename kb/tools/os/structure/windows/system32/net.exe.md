@@ -37,10 +37,12 @@ Command-line administration of accounts, groups, policies, shares, network conne
 
 # typical use cases
 
-- `net user` / `net user <name> /domain` - list or inspect accounts.
-- `net user <name> <pw> /add` - create a user.
-- `net accounts` - view or set password/lockout policy.
-- `net use x: \\server\share` - map a drive.
+| usage | description |
+| --- | --- |
+| `net user` / `net user <name> /domain` | list or inspect accounts. |
+| `net user <name> <pw> /add` | create a user. |
+| `net accounts` | view or set password/lockout policy. |
+| `net use x: \\server\share` | map a drive. |
 
 # options
 

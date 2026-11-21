@@ -37,11 +37,13 @@ Manage driver packages in the driver store and Plug and Play devices from the co
 
 # typical use cases
 
-- Add and install a driver package: `pnputil /add-driver x:\driver.inf /install`
-- Enumerate third-party drivers: `pnputil /enum-drivers`
-- Export all drivers for backup: `pnputil /export-driver * c:\backup`
-- Delete a driver: `pnputil /delete-driver oem0.inf /force`
-- Enumerate devices with problems: `pnputil /enum-devices /problem`
+| usage | description |
+| --- | --- |
+| `pnputil /add-driver x:\driver.inf /install` | Add and install a driver package. |
+| `pnputil /enum-drivers` | Enumerate third-party drivers. |
+| `pnputil /export-driver * c:\backup` | Export all drivers for backup. |
+| `pnputil /delete-driver oem0.inf /force` | Delete a driver. |
+| `pnputil /enum-devices /problem` | Enumerate devices with problems. |
 
 # options
 

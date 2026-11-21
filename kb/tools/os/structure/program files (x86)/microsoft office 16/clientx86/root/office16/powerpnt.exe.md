@@ -36,8 +36,10 @@ Creating, editing and presenting slide shows; it is also the binary that PowerPo
 
 # typical use cases
 
-- Open and edit presentations.
-- Run slide shows.
+| usage | description |
+| --- | --- |
+| — | Open and edit presentations. |
+| — | Run slide shows. |
 
 # options
 

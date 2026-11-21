@@ -36,9 +36,11 @@ Runs Microsoft Word. Built-in Word commands (e.g. FileSave) can be replaced by m
 
 # typical use cases
 
-- Create and edit documents based on Normal.dotm.
-- Override built-in commands with VBA macros stored in a template or Normal.dotm.
-- Troubleshoot add-ins/compatibility mode by resetting Normal.dotm.
+| usage | description |
+| --- | --- |
+| — | Create and edit documents based on Normal.dotm. |
+| — | Override built-in commands with VBA macros stored in a template or Normal.dotm. |
+| — | Troubleshoot add-ins/compatibility mode by resetting Normal.dotm. |
 
 # options
 

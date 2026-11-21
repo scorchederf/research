@@ -34,10 +34,12 @@ Framework that runs a series of tests against DCs selected by scope (enterprise,
 
 # typical use cases
 
-- `dcdiag /s:<DC>` - health check one DC.
-- `dcdiag /e /v /f:log.txt` - verbose enterprise-wide check to a file.
-- `dcdiag /test:DNS /e /v` - DNS infrastructure tests.
-- `dcdiag /test:DcPromo /DnsDomain:<name> /NewForest` - pre-promotion DNS check.
+| usage | description |
+| --- | --- |
+| `dcdiag /s:<DC>` | health check one DC. |
+| `dcdiag /e /v /f:log.txt` | verbose enterprise-wide check to a file. |
+| `dcdiag /test:DNS /e /v` | DNS infrastructure tests. |
+| `dcdiag /test:DcPromo /DnsDomain:<name> /NewForest` | pre-promotion DNS check. |
 
 # options
 

@@ -32,9 +32,11 @@ Assemble IL source into PE files (.exe/.dll) without intermediate object files o
 
 # typical use cases
 
-- Assemble an exe: `ilasm myTestFile`
-- Assemble a dll: `ilasm myTestFile /dll`
-- Assemble with a new name: `ilasm myTestFile /dll /output:myNewTestFile.dll`
+| usage | description |
+| --- | --- |
+| `ilasm myTestFile` | Assemble an exe. |
+| `ilasm myTestFile /dll` | Assemble a dll. |
+| `ilasm myTestFile /dll /output:myNewTestFile.dll` | Assemble with a new name. |
 
 # options
 

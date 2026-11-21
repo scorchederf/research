@@ -38,11 +38,13 @@ powershell.exe is the command-line interface for Windows PowerShell 5.1, a task-
 
 # typical use cases
 
-- Run a command: `PowerShell -Command "Get-EventLog -LogName Security"`
-- Run a script block: `PowerShell -Command {Get-EventLog -LogName Security}`
-- Start without profiles: `PowerShell.exe -NoProfile`
-- Session-only execution policy: `PowerShell.exe -ExecutionPolicy Restricted`
-- Encoded command: build a UTF-16LE Base64 string and run `powershell.exe -EncodedCommand $encodedCommand`
+| usage | description |
+| --- | --- |
+| `PowerShell -Command "Get-EventLog -LogName Security"` | Run a command. |
+| `PowerShell -Command {Get-EventLog -LogName Security}` | Run a script block. |
+| `PowerShell.exe -NoProfile` | Start without profiles. |
+| `PowerShell.exe -ExecutionPolicy Restricted` | Session-only execution policy. |
+| — | Encoded command: build a UTF-16LE Base64 string and run `powershell.exe -EncodedCommand $encodedCommand`. |
 
 # options
 

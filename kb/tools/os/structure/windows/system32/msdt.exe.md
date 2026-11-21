@@ -37,9 +37,11 @@ Run troubleshooting packs interactively or unattended, and collect diagnostic da
 
 # typical use cases
 
-- Run a built-in troubleshooter by ID: `msdt /id <packagename>`
-- Run a custom pack: `msdt /path <file.diagcab>`
-- View troubleshooting history: `msdt /dt <directory>`
+| usage | description |
+| --- | --- |
+| `msdt /id <packagename>` | Run a built-in troubleshooter by ID. |
+| `msdt /path <file.diagcab>` | Run a custom pack. |
+| `msdt /dt <directory>` | View troubleshooting history. |
 
 # options
 

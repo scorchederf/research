@@ -38,11 +38,13 @@ Opens Control Panel or starts a Control Panel item directly from the command lin
 
 # typical use cases
 
-- Open Control Panel: `control.exe`.
-- Open a .cpl item: `control.exe MyCpl.cpl`.
-- Open a specific tab of a legacy item: `control.exe sysdm.cpl,,3`.
-- Open an item by canonical name: `control.exe /name Microsoft.WindowsUpdate`.
-- Open a sub-page: `control.exe /name Microsoft.Mouse /page 2` (pages listed in Canonical Names of Control Panel Items).
+| usage | description |
+| --- | --- |
+| `control.exe` | Open Control Panel. |
+| `control.exe MyCpl.cpl` | Open a .cpl item. |
+| `control.exe sysdm.cpl,,3` | Open a specific tab of a legacy item. |
+| `control.exe /name Microsoft.WindowsUpdate` | Open an item by canonical name. |
+| — | Open a sub-page: `control.exe /name Microsoft.Mouse /page 2` (pages listed in Canonical Names of Control Panel Items). |
 
 # options
 

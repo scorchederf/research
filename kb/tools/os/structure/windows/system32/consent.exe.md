@@ -38,8 +38,10 @@ Provides the elevation prompt (consent prompt and credential prompt) for UAC so 
 
 # typical use cases
 
-- Displayed automatically when an app requests elevation (Run as administrator, requireAdministrator manifest, UAC shield actions).
-- Behaviour configured via the "User Account Control: Behavior of the elevation prompt..." and "Switch to the secure desktop when prompting for elevation" policies (secpol.msc / Group Policy).
+| usage | description |
+| --- | --- |
+| — | Displayed automatically when an app requests elevation (Run as administrator, requireAdministrator manifest, UAC shield actions). |
+| — | Behaviour configured via the "User Account Control: Behavior of the elevation prompt..." and "Switch to the secure desktop when prompting for elevation" policies (secpol.msc / Group Policy). |
 
 # options
 
