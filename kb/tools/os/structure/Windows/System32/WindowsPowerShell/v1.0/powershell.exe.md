@@ -24,9 +24,9 @@ powershell.exe is the command-line interface for Windows PowerShell 5.1, a task-
 ## simple description
 
 > ### 2026-11-21 Claude said
-> This is Windows PowerShell 5.1, Microsoft's built-in command shell and scripting language for running and automating admin tasks. You can open it interactively, or launch it to run one command or script and exit. Its startup options control things like whether profiles load, the execution policy for that session, and whether the window is visible. The newer PowerShell 7 is a separate program called `pwsh.exe`.
+> This is Windows PowerShell 5.1, the command shell and scripting language built into Windows. Admins use it to automate almost anything: managing users, services, the registry, remote machines and Microsoft cloud services. You can use it interactively, or start it to run a single command or script and exit. PowerShell 7 is a separate, newer program (`pwsh.exe`) that installs alongside it.
 >
-> **SOC NOTE**: Command lines matter here. `-EncodedCommand` hides a Base64 (UTF-16LE) command, `-WindowStyle Hidden` hides the window, `-NoProfile` and `-NonInteractive` are typical of unattended runs, and `-ExecutionPolicy` overrides the policy for that session only (without changing the registry). Decode any encoded command you find in process logs.
+> **SOC NOTE**: PowerShell is one of the most abused tools in Windows attacks (MITRE ATT&CK T1059.001), used for downloading payloads, running code in memory and lateral movement. Red flags in command lines include `-EncodedCommand`/`-enc` (Base64 commands, T1027), `-WindowStyle Hidden`, `-NoProfile`, `-ExecutionPolicy Bypass`, `IEX`/`Invoke-Expression` and `DownloadString`/`Invoke-WebRequest`. Check Script Block Logging (event 4104 in `Microsoft-Windows-PowerShell/Operational`), the PSReadLine `ConsoleHost_history.txt` file, and watch for attempts to downgrade with `-Version 2` to evade logging.
 >
 
 # purpose

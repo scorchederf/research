@@ -23,9 +23,9 @@ The default log folder for the Microsoft Configuration Manager (ConfigMgr/MECM) 
 ## simple description
 
 > ### 2026-11-21 Claude said
-> This folder holds the log files for the Microsoft Configuration Manager (SCCM/MECM) client, the agent organisations use to deploy software, updates and settings to PCs. Each client component writes its own `.log` file here, such as CcmExec.log for the main client service. When a log fills up it rolls over to a `.lo_` file. Admins use these logs to troubleshoot why software, updates or policies did or didn't apply.
+> This folder holds the log files for the Microsoft Configuration Manager client (also called SCCM, MECM or ConfigMgr), the agent many organisations use to deploy software, updates, scripts and settings to their computers. Each client component writes its own `.log` file here, for example `CcmExec.log` for the main service, `AppEnforce.log` for application installs and `execmgr.log` for package/program runs. Admins read these with the CMTrace tool to troubleshoot deployments. Logs roll over to a `.lo_` file when they reach their size limit.
 >
-> **SOC NOTE**: These logs record what Configuration Manager deployed or ran on a machine, and when. That's useful for telling admin-pushed software and task sequences (e.g. `smsts.log`) apart from attacker activity, and for building a timeline. Note that the `.lo_` rollover means older history is overwritten.
+> **SOC NOTE**: These logs show exactly what Configuration Manager executed on a host, with command lines and timestamps, which helps you tell legitimate admin deployments apart from attacker activity. Attackers who compromise SCCM can push malware or scripts to many machines at once (MITRE ATT&CK T1072, software deployment tools), and this folder is where that shows up on each endpoint. Check `AppEnforce.log`, `execmgr.log` and `smsts.log` around the time of suspicious activity, and remember older history may already be overwritten.
 >
 
 # purpose

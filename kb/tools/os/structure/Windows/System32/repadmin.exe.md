@@ -24,9 +24,9 @@ Repadmin.exe helps administrators diagnose Active Directory replication between 
 ## simple description
 
 > ### 2026-11-21 Claude said
-> Repadmin is an admin tool for checking Active Directory replication, the process that keeps domain controllers in sync with each other. It can show whether replication is working, which domain controllers are failing, and detailed change history (metadata) for directory objects. It can also force replication to happen immediately. It comes with the AD DS role and the Remote Server Administration Tools (RSAT).
+> Repadmin is an Active Directory admin tool for checking and troubleshooting replication, the process that keeps domain controllers in sync. It can show whether replication is healthy, list each domain controller's replication partners and errors, show detailed change history (metadata) for any directory object, and force replication immediately. It's installed on domain controllers and on admin workstations with RSAT. Normal users and endpoints should never need it.
 >
-> **SOC NOTE**: `repadmin /showobjmeta` shows when and where attributes such as passwords were last changed on an object, which helps trace account changes. `/replicate`, `/syncall` and `/rodcpwdrepl` force replication, including pushing passwords to read-only DCs. Repadmin needs domain admin-level rights on the targets, so unexpected use outside known admin workstations is notable.
+> **SOC NOTE**: Repadmin is useful in investigations: `repadmin /showobjmeta` shows when and on which DC an attribute (for example a password, group membership or `adminCount`) was last changed, helping you time account manipulation. Attackers with high privileges may use replication features themselves; DCSync attacks (MITRE ATT&CK T1003.006) abuse the same replication rights, though usually via tools like Mimikatz rather than repadmin. Running repadmin outside known admin systems, or `/rodcpwdrepl` pushing passwords to RODCs, is worth questioning.
 >
 
 # purpose

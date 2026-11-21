@@ -26,9 +26,9 @@ reg.exe (the Console Registry Tool for Windows) performs operations on registry 
 ## simple description
 
 > ### 2026-11-21 Claude said
-> Reg.exe is Windows' built-in command-line tool for working with the registry, the database where Windows and applications store their settings. It can read (query), add, change, delete, export and import registry keys and values. It can also save whole sections of the registry to a file and load them back, and it can work against remote computers (HKLM and HKU only).
+> Reg.exe is Windows' built-in command-line tool for working with the registry, the database where Windows and applications store their settings. It can read, add, change and delete registry keys and values, export and import `.reg` files, and save or load whole registry hives to and from files. It works locally and against remote computers. Admins and scripts use it to configure systems without opening Registry Editor.
 >
-> **SOC NOTE**: `reg save` and `reg export` copy registry data to files, `reg add` and `reg delete` change settings, and `reg query /s /f` searches the registry, so all of these are worth reviewing in process command lines. Microsoft lists reg.exe among the components blocked in Windows S mode.
+> **SOC NOTE**: Attackers use reg.exe to add persistence such as Run keys (MITRE ATT&CK T1547.001), to change security settings like disabling Defender or enabling RDP (T1112, T1562.001), and to query for credentials or configuration (T1012). A high-value red flag is `reg save HKLM\SAM`, `HKLM\SYSTEM` or `HKLM\SECURITY`, which dumps the hives needed to extract local password hashes and secrets offline (T1003.002). Look for reg.exe launched by Office apps, script hosts or unusual parent processes.
 >
 
 # purpose

@@ -22,9 +22,9 @@ Certutil.exe is a command-line program installed as part of Certificate Services
 ## simple description
 
 > ### 2026-11-21 Claude said
-> Certutil is a command-line tool built into Windows for working with certificates. Admins use it to view certificate details, check that certificates and their chains are valid, and manage a certificate authority (CA). It can also convert files between formats, such as encoding or decoding a file. Run with no options on a normal machine, it simply dumps information.
+> Certutil is a command-line tool built into every version of Windows for working with certificates and certificate authorities (CAs). Admins use it to inspect certificates, check certificate chains and revocation lists, manage certificate stores, and back up or configure a CA server. It also has general-purpose helpers for encoding and decoding files (Base64 and hex) and fetching URLs to verify certificates. Because it's signed by Microsoft and always present, it's a classic "living off the land" binary (LOLBin).
 >
-> **SOC NOTE**: Microsoft lists certutil.exe as an application that attackers can use to bypass App Control allow policies, and recommends blocking it where it isn't needed. Its encode and decode verbs (`-encodehex`, `-decodehex` and others) can transform files, and its `-GetKey` and `-RecoverKey` verbs can retrieve archived private keys, so any unexpected certutil run on an endpoint is worth checking.
+> **SOC NOTE**: Attackers commonly abuse certutil to download payloads (`certutil -urlcache -split -f http://... file.exe`, MITRE ATT&CK T1105) and to decode Base64-hidden malware (`certutil -decode`, T1140). It's also used to export certificates and private keys from stores (T1552.004). Any certutil process with `-urlcache`, `-decode`/`-encode`, `-exportPFX` or an external URL on its command line deserves investigation, and downloads leave cached copies under the user's CryptnetUrlCache folder.
 >
 
 # purpose
