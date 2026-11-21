@@ -18,12 +18,14 @@ url:
 
 # description
 
-_Not documented on Microsoft Learn_ - Learn has no page describing this specific event log file. Related Learn content: Windows Firewall with Advanced Security events can be viewed in Event Viewer, and Windows 11 enhanced the firewall event logs so an audit can identify the specific filter responsible for an event. Separately, the firewall's packet log is a text file at `%windir%\system32\logfiles\firewall\pfirewall.log` (not this .evtx).
+Not documented on Microsoft Learn at 2026/11/21 05:17 UTC - Learn has no page describing this specific event log file. Related Learn content: Windows Firewall with Advanced Security events can be viewed in Event Viewer, and Windows 11 enhanced the firewall event logs so an audit can identify the specific filter responsible for an event. Separately, the firewall's packet log is a text file at `%windir%\system32\logfiles\firewall\pfirewall.log` (not this .evtx).
 
 ## simple description
 
-_Not documented on Microsoft Learn_
+> ### 2026-11-21 Claude said
+> Not documented on Microsoft Learn at 2026/11/21 05:17 UTC
+>
 
 # purpose
 
-_Not documented on Microsoft Learn_
+Not documented on Microsoft Learn at 2026/11/21 05:17 UTC

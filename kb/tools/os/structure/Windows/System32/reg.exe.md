@@ -24,7 +24,11 @@ reg.exe (the Console Registry Tool for Windows) performs operations on registry 
 
 ## simple description
 
-A built-in command-line tool for reading and changing the Windows registry. It can query, add, delete, export, import, save and load registry keys and values, locally and on remote computers.
+> ### 2026-11-21 Claude said
+> Reg.exe is Windows' built-in command-line tool for working with the registry, the database where Windows and applications store their settings. It can read (query), add, change, delete, export and import registry keys and values. It can also save whole sections of the registry to a file and load them back, and it can work against remote computers (HKLM and HKU only).
+>
+> **SOC NOTE**: `reg save` and `reg export` copy registry data to files, `reg add` and `reg delete` change settings, and `reg query /s /f` searches the registry, so all of these are worth reviewing in process command lines. Microsoft lists reg.exe among the components blocked in Windows S mode.
+>
 
 # purpose
 

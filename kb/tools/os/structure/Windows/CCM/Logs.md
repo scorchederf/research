@@ -22,7 +22,11 @@ The default log folder for the Microsoft Configuration Manager (ConfigMgr/MECM) 
 
 ## simple description
 
-Where the Configuration Manager client keeps its log files. Each client component writes its own `.log` file here. These logs are the main source for troubleshooting the client.
+> ### 2026-11-21 Claude said
+> This folder holds the log files for the Microsoft Configuration Manager (SCCM/MECM) client, the agent organisations use to deploy software, updates and settings to PCs. Each client component writes its own `.log` file here, such as CcmExec.log for the main client service. When a log fills up it rolls over to a `.lo_` file. Admins use these logs to troubleshoot why software, updates or policies did or didn't apply.
+>
+> **SOC NOTE**: These logs record what Configuration Manager deployed or ran on a machine, and when. That's useful for telling admin-pushed software and task sequences (e.g. `smsts.log`) apart from attacker activity, and for building a timeline. Note that the `.lo_` rollover means older history is overwritten.
+>
 
 # purpose
 

@@ -22,7 +22,11 @@ The diskpart command interpreter manages a computer's drives: disks, partitions,
 
 ## simple description
 
-A built-in, interactive command-line tool for managing disks, partitions and volumes. You select a disk or volume first, then run commands such as create, format, assign or clean against it. It can also run scripted command files.
+> ### 2026-11-21 Claude said
+> Diskpart is Windows' built-in command-line tool for managing disks, partitions and volumes. You first select a disk or volume, then run commands against it, such as create, format, assign a drive letter, or clean (wipe) it. It can also attach and manage virtual hard disks (VHDs) and run a list of commands from a script file. It needs administrator rights.
+>
+> **SOC NOTE**: Destructive commands such as `clean`, `delete partition` and `format` can wipe data, and `diskpart /s script.txt` runs commands from a file, so the script contents matter. `attach vdisk` mounts VHD files as local drives. Review diskpart activity on servers or endpoints where it isn't part of normal admin work.
+>
 
 # purpose
 

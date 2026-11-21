@@ -21,7 +21,11 @@ Certutil.exe is a command-line program installed as part of Certificate Services
 
 ## simple description
 
-A built-in Windows tool for viewing and managing certificates and certification authorities. Run on a CA with no parameters it shows the CA configuration; elsewhere it defaults to `certutil -dump`. It can also encode/decode files and check certificate chains.
+> ### 2026-11-21 Claude said
+> Certutil is a command-line tool built into Windows for working with certificates. Admins use it to view certificate details, check that certificates and their chains are valid, and manage a certificate authority (CA). It can also convert files between formats, such as encoding or decoding a file. Run with no options on a normal machine, it simply dumps information.
+>
+> **SOC NOTE**: Microsoft lists certutil.exe as an application that attackers can use to bypass App Control allow policies, and recommends blocking it where it isn't needed. Its encode and decode verbs (`-encodehex`, `-decodehex` and others) can transform files, and its `-GetKey` and `-RecoverKey` verbs can retrieve archived private keys, so any unexpected certutil run on an endpoint is worth checking.
+>
 
 # purpose
 

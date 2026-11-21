@@ -23,7 +23,11 @@ powershell.exe is the command-line interface for Windows PowerShell 5.1, a task-
 
 ## simple description
 
-The Windows PowerShell 5.1 executable. It starts a PowerShell session, or runs a command or script and exits. Parameters control profile loading, execution policy, window style and encoded commands.
+> ### 2026-11-21 Claude said
+> This is Windows PowerShell 5.1, Microsoft's built-in command shell and scripting language for running and automating admin tasks. You can open it interactively, or launch it to run one command or script and exit. Its startup options control things like whether profiles load, the execution policy for that session, and whether the window is visible. The newer PowerShell 7 is a separate program called `pwsh.exe`.
+>
+> **SOC NOTE**: Command lines matter here. `-EncodedCommand` hides a Base64 (UTF-16LE) command, `-WindowStyle Hidden` hides the window, `-NoProfile` and `-NonInteractive` are typical of unattended runs, and `-ExecutionPolicy` overrides the policy for that session only (without changing the registry). Decode any encoded command you find in process logs.
+>
 
 # purpose
 

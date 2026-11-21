@@ -17,20 +17,22 @@ url:
 
 # description
 
-_Not documented on Microsoft Learn_ - Learn has no page describing this file path or MSAccess.exe itself. Related Learn content covers Microsoft Access features (e.g. the RunApplication macro action, which runs other Windows applications from Access, and the *Command-line arguments* option on the Advanced tab of Access options).
+Not documented on Microsoft Learn at 2026/11/21 05:17 UTC - Learn has no page describing this file path or MSAccess.exe itself. Related Learn content covers Microsoft Access features (e.g. the RunApplication macro action, which runs other Windows applications from Access, and the *Command-line arguments* option on the Advanced tab of Access options).
 
 ## simple description
 
-_Not documented on Microsoft Learn_
+> ### 2026-11-21 Claude said
+> Not documented on Microsoft Learn at 2026/11/21 05:17 UTC
+>
 
 # purpose
 
-_Not documented on Microsoft Learn_
+Not documented on Microsoft Learn at 2026/11/21 05:17 UTC
 
 # typical use cases
 
-_Not documented on Microsoft Learn_
+Not documented on Microsoft Learn at 2026/11/21 05:17 UTC
 
 # options
 
-_Not documented on Microsoft Learn_
+Not documented on Microsoft Learn at 2026/11/21 05:17 UTC

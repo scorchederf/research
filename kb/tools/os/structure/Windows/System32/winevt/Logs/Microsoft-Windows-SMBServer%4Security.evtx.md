@@ -20,7 +20,11 @@ The file behind the `Microsoft-Windows-SmbServer/Security` event log, written by
 
 ## simple description
 
-An event log for security-related events from the Windows SMB server. Learn's example is event 3023, logged when an SMB client is logged on as the Guest account.
+> ### 2026-11-21 Claude said
+> This file is the event log where the Windows SMB server records security-related events. SMB is the protocol Windows uses for file shares. Learn's documented example is event 3023, written when an SMB client is logged on as the Guest account. Microsoft has no dedicated page describing everything this log contains.
+>
+> **SOC NOTE**: Event 3023 (Task Category: InsecureGuestLogon) shows a guest (unauthenticated) logon to an SMB share. Microsoft describes insecure guest logons as more exposed to attacker-in-the-middle attacks, phishing and malware. The matching client-side events are in `Microsoft-Windows-SmbClient/Security`.
+>
 
 # purpose
 
