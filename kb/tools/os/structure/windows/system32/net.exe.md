@@ -15,6 +15,16 @@ url:
   - https://learn.microsoft.com/troubleshoot/windows-server/networking/net-commands-on-operating-systems
   - https://learn.microsoft.com/windows-server/administration/windows-commands/net-user
   - https://learn.microsoft.com/windows-server/administration/windows-commands/windows-commands
+  - https://learn.microsoft.com/windows-server/administration/server-core/server-core-administer
+  - https://learn.microsoft.com/troubleshoot/windows-server/active-directory/add-special-groups-to-built-in-groups
+  - https://learn.microsoft.com/powershell/scripting/samples/performing-networking-tasks
+  - https://learn.microsoft.com/troubleshoot/windows-server/networking/problems-administrative-shares-missing
+  - https://learn.microsoft.com/windows-server/administration/windows-commands/net-print
+  - https://learn.microsoft.com/sysinternals/downloads/psfile
+  - https://learn.microsoft.com/windows/win32/wmisdk/starting-and-stopping-the-wmi-service
+  - https://learn.microsoft.com/sql/database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services
+  - https://learn.microsoft.com/biztalk/core/how-to-start-stop-pause-resume-or-restart-biztalk-server-services
+  - https://learn.microsoft.com/windows/win32/com/error-handling-strategies
 ---
 
 **fullpath**:C:\Windows\System32\net.exe
@@ -43,30 +53,34 @@ Command-line administration of accounts, groups, policies, shares, network conne
 | `net user <name> <pw> /add` | create a user. |
 | `net accounts` | view or set password/lockout policy. |
 | `net use x: \\server\share` | map a drive. |
+| `net localgroup Administrators /add <domain>\<username>` | Add a user to the local Administrators group. |
+| `net share` | List shares, including ADMIN$, C$ and IPC$. |
+| `net start <ServiceName>` / `net stop <ServiceName>` | Start or stop a service. |
+| `net helpmsg 1355` | Decode a Windows error number. |
 
 # options
 
 | option | description |
 | --- | --- |
 | `ACCOUNTS` | Set local account and password policy (`/FORCELOGOFF`, `/MINPWLEN`, `/MAXPWAGE`, `/MINPWAGE`, `/UNIQUEPW`, `/DOMAIN`); not used on domain controllers. |
-| `COMPUTER` | Net subcommand (listed on Learn without further detail). |
-| `CONFIG` | Net subcommand (listed on Learn without further detail). |
-| `CONTINUE` | Net subcommand (listed on Learn without further detail). |
-| `FILE` | Net subcommand (listed on Learn without further detail). |
-| `GROUP` | Net subcommand (listed on Learn without further detail). |
-| `HELP` | Net subcommand (listed on Learn without further detail). |
-| `HELPMSG` | Net subcommand (listed on Learn without further detail). |
-| `LOCALGROUP` | Net subcommand (listed on Learn without further detail). |
-| `NAME` | Net subcommand (listed on Learn without further detail). |
-| `PAUSE` | Net subcommand (listed on Learn without further detail). |
-| `PRINT` | Net subcommand (listed on Learn without further detail). |
-| `SEND` | Net subcommand (listed on Learn without further detail). |
-| `SESSION` | Net subcommand (listed on Learn without further detail). |
-| `SHARE` | Net subcommand (listed on Learn without further detail). |
-| `START` | Net subcommand (listed on Learn without further detail). |
-| `STATISTICS` | Net subcommand (listed on Learn without further detail). |
-| `STOP` | Net subcommand (listed on Learn without further detail). |
-| `TIME` | Net subcommand (listed on Learn without further detail). |
+| `COMPUTER` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `CONFIG` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `CONTINUE` | Resumes a paused service: `net continue <ServiceName>`. |
+| `FILE` | Shows files on this system that other computers have opened. Long path names are truncated and it can't show remote systems. |
+| `GROUP` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `HELP` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `HELPMSG` | Shows the text for a system or network error code: `net helpmsg <decimal_code>` (e.g. `net helpmsg 1355` returns "The specified domain did not exist"). |
+| `LOCALGROUP` | Lists local groups (`net localgroup`), creates one (`net localgroup <name> /add`), or adds/removes members (`net localgroup Administrators /add <domain>\<user>`, `/delete`). Can add special groups such as `"nt authority\authenticated users"`. |
+| `NAME` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `PAUSE` | Pauses a running service: `net pause <ServiceName>`. |
+| `PRINT` | Deprecated. Displays a printer queue or print job, or controls a job (`/hold`, `/release`, `/delete`): `net print \\<computer>\<share>` or `net print \\<computer> <jobnumber>`. |
+| `SEND` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `SESSION` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `SHARE` | Lists shares, including administrative shares (ADMIN$, C$, IPC$), or creates one, e.g. `net share tempshare=C:\temp /users:25 /remark:"..."`. |
+| `START` | Starts a service: `net start <ServiceName>` (e.g. `net start winmgmt`); service startup options can be appended using `/` instead of `-`. |
+| `STATISTICS` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
+| `STOP` | Stops a service: `net stop <ServiceName>`; services that depend on it also stop. |
+| `TIME` | _Not documented on Microsoft Learn at 2026/11/21 06:28 UTC_ |
 | `USE` | Connect to a network share, e.g. `net use x: \\server\share`. |
 | `USER` | Add, modify, delete or display user accounts on the local computer or domain (`/add`, `/delete`, `/domain`, `/active`, `/times`, `/expires`, ...). |
-| `VIEW` | Net subcommand (listed on Learn without further detail). |
+| `VIEW` | Used to view a computer's resources remotely (mentioned on Learn alongside `net use`; no syntax documented). |

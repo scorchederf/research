@@ -29,6 +29,7 @@ Turn a Windows path (e.g. `C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\
 
 - Use only information from Microsoft Learn pages actually retrieved for this path. **Exception:** the `Claude said` blockquote under `## simple description` is written from Claude's own knowledge (see below).
 - If a section has no Learn coverage, write `_Not documented on Microsoft Learn at {{yyyy/MM/dd HH:MM UTC}}_` (italics) with the current UTC time, e.g. `_Not documented on Microsoft Learn at 2026/11/21 05:17 UTC_`.
+- Never write placeholder or filler text (e.g. "listed on Learn without further detail"). If Learn only names an option or subcommand, search Learn for it (2+ queries) before giving up; anything still undocumented gets the italic not-documented line.
 - Remove all `{{if}}` / `{{endif}}` lines and the sections that do not apply to the classified type.
 - `created`: today's date, `YYYY-MM-DD`.
 - `fullpath`: the full path exactly as given, in single quotes in the frontmatter, e.g. `fullpath: 'C:\Windows\System32\cmd.exe'`. Repeat it unquoted on the `**fullpath**:` line above `# description`.
