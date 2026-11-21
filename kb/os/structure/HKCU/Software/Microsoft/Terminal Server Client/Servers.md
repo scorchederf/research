@@ -1,5 +1,6 @@
 ---
 created: 2026-11-21
+fullpath: 'HKCU\Software\Microsoft\Terminal Server Client\Servers'
 generator:
   - claude
   - microsoftlearn
@@ -13,6 +14,8 @@ url:
   - https://learn.microsoft.com/troubleshoot/windows-server/remote/remove-entries-from-remote-desktop-connection-computer
   - https://learn.microsoft.com/windows/win32/termserv/virtual-channel-client-registration
 ---
+
+**fullpath**:HKCU\Software\Microsoft\Terminal Server Client\Servers
 
 # description
 

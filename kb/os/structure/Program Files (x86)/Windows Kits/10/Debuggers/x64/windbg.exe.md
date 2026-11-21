@@ -1,5 +1,6 @@
 ---
 created: 2026-11-21
+fullpath: 'C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe'
 generator:
   - claude
   - microsoftlearn
@@ -17,6 +18,8 @@ url:
   - https://learn.microsoft.com/windows-hardware/drivers/gettingstarted/writing-a-kmdf-driver-based-on-a-template
   - https://learn.microsoft.com/windows-hardware/drivers/debugger/
 ---
+
+**fullpath**:C:\Program Files (x86)\Windows Kits\10\Debuggers\x64\windbg.exe
 
 # description
 
